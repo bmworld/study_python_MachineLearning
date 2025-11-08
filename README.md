@@ -22,8 +22,46 @@
  python --version
  where python
  conda info --envs
+ 
 ```
 
+---
+
+## 💡 머신러닝 주요 라이브러리 (설치)
+
+# 환경 활성화
+```
+conda activate ai-env
+```
+
+# 채널(최초 1회)
+```
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+```
+
+# 필수
+```
+conda install -y numpy pandas scikit-learn scipy matplotlib seaborn
+```
+
+# 선택(필요 시)
+```
+conda install -y jupyterlab ipykernel joblib statsmodels yfinance
+conda install -y xgboost lightgbm
+conda install -y plotly bokeh
+```
+
+# 딥러닝(선택)
+```
+pip install tensorflow-macos tensorflow-metal
+pip install torch torchvision torchaudio
+```
+
+# 설치 확인
+```
+python -c "import numpy,pandas,sklearn;print('OK',numpy.__version__,pandas.__version__,sklearn.__version__)"
+```
 
 ---
 
